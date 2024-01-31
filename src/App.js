@@ -1,10 +1,13 @@
+import { Provider } from "react-redux";
 import "./App.css";
+import MainContainer from "./Components/MainContainer";
+import appStore from "./utils/Redux/appStore";
 
 function App() {
   return (
-    <div>
-      <h1 className="font-bold"> Welcome to Minizuba </h1>
-    </div>
+    <Provider store={appStore}>
+      <MainContainer />
+    </Provider>
   );
 }
 
